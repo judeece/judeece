@@ -1,5 +1,6 @@
 ---
 - name: Copy the content to webserver
+  become: yes
   hosts: all
   tasks:
     - name: copy the Blue content to server
