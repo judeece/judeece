@@ -3,7 +3,7 @@
   hosts: all
   become: yes
   tasks:
-    - name: Create a file called '/tmp/testfile.txt' with the content 'hello world'.
+    - name: Create a file called
       yum:
         name: httpd
         state: latest
