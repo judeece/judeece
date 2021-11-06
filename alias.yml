@@ -1,6 +1,6 @@
 ---
 - name: Copy the content to webserver
-  hosts: devhost
+  hosts: all
   tasks:
     - name: copy the Blue content to server
       file:
