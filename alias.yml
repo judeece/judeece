@@ -1,10 +1,13 @@
 ---
-- name: Webserver and Alias Deployment
-  hosts: dev
-  roles:
-    - webserver
+- name: Copy the content to webserver
+  hosts: all
   tasks:
-    - name: webserver alias deployment
-      template:
-        src: alias.temp.j2
+    - name: copy the Blue content to server
+      copy:
+        content: Welcome to Myserver, i am Blue
+        dest: /var/www/html/index.html
+
+    - name: copy the Green content to server    
+      copy:
+        content: Welcome to Myserver, i am Green
         dest: /var/www/html/index.html
