@@ -6,6 +6,7 @@
       file:
         path: /var/www/html
         state: directory
+    - name: test
       copy:
         content: Welcome to Myserver, i am Blue
         dest: /var/www/html/index.html
