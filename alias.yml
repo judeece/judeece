@@ -1,8 +1,11 @@
 ---
 - name: Copy the content to webserver
-  hosts: all
+  hosts: devhost
   tasks:
     - name: copy the Blue content to server
+      file:
+        path: /var/www/html
+        state: directory
       copy:
         content: Welcome to Myserver, i am Blue
         dest: /var/www/html/index.html
