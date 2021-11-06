@@ -10,4 +10,4 @@
     - name: install
       service:
          name: httpd
-         state: enabled
+         state: restarted
