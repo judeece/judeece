@@ -2,6 +2,7 @@
 - name: This is a hello-world example
   hosts: all
   become: yes
+  become_user: root
   tasks:
     - name: Create a file called
       yum:
