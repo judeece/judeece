@@ -1,14 +1,14 @@
 ---
-- name: This is a hello-world example
+- name: "This is a hello-world example"
   hosts: all
   become: yes
   become_user: root
   tasks:
-    - name: Create a file called
+    - name: "Create a file called"
       yum:
         name: httpd
         state: latest
-    - name: install
+    - name: "install"
       service:
          name: httpd
          state: restarted
