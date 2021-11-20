@@ -13,3 +13,4 @@
       service:
          name: httpd
          state: restarted
+      when:  ansible_distribution_major_version == "7"
